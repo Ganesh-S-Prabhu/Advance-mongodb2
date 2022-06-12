@@ -25,10 +25,10 @@ setdata(data)
             <h3>Name:{datas.name}   </h3>
             <h3>Email:{datas.email}  </h3>
             <h3>Address </h3>
-            <br />
+           
                 {datas.address.map(e=>{
                     return(
-                        <div>
+                        <div className="address" key={e._id}>
                             <span>{e.type}Address</span>
                             <br />
                             <span>{e.home_no},  {e.city},    {e.state}-{e.pincode}         </span>

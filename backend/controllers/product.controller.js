@@ -5,7 +5,7 @@ const Product=require('../models/product.model')
 
 router.get("/",async(req,res)=>{
     try {
-        const products = await Product.find().lean().exec();
+        const products = await Product.find().populate("cetegoryid").lean().exec();
 
            res.status(200).send(products)
     } 
@@ -17,7 +17,7 @@ router.get("/",async(req,res)=>{
 
 router.post("/create",async(req,res)=>{
     try {
-           let product=await Product.create(req.body).lean().exec()
+           let product=await Product.create(req.body)
 
            return res.status(201).send(product);
     } 

@@ -1,0 +1,28 @@
+#product{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+#product>div{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#product>div>img{
+   width: 200px;
+   height: 200px;
+   /* border: 1px solid red; */
+}
+#navbar>div:nth-child(1){
+    display: flex;
+    justify-content: space-evenly;
+    }
+
+    h2{
+        cursor: pointer;
+    }
+    #navbar{
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+                margin-bottom: 50px;
+    }
+    .address{
+        margin-bottom: 20px;
+    }

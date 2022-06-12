@@ -5,6 +5,11 @@ const productSchema=new mongoose.Schema({
         productname:{type:String,required:true},
         productimg:{type:String,required:true},
         price:{type:Number,required:true},
+        cetegoryid: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'categories'
+          },
+         
        
 },{
     timestamps:true,
